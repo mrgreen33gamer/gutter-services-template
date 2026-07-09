@@ -35,36 +35,42 @@ export default function HomePage() {
       title: "Seamless Gutters",
       body: "Custom-formed seamless aluminum gutters sized on site for your roofline — fewer seams, fewer leaks, cleaner look.",
       link: "/services/seamless-gutters",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faShieldHalved,
       title: "Gutter Guards",
       body: "Micro-mesh and screen guards that keep leaves and pine needles out while water keeps flowing during Texas storms.",
       link: "/services/gutter-guards",
+      image: "/pages/home/services/service-2.jpg",
     },
     {
       icon: faWrench,
       title: "Gutter Repair",
       body: "Rehang, reseal, and replace damaged sections. Honest repair-vs-replace advice before you spend.",
       link: "/services/gutter-repair",
+      image: "/pages/home/services/service-3.jpg",
     },
     {
       icon: faWater,
       title: "Downspouts & Drainage",
       body: "Properly sized downspouts, extensions, and underground drainage that move water away from your foundation.",
       link: "/services/downspouts-drainage",
+      image: "/pages/home/services/service-4.jpg",
     },
     {
       icon: faBroom,
       title: "Gutter Cleaning",
       body: "Thorough cleanouts, flush tests, and debris haul-away — so your system works when the next storm hits.",
       link: "/services/gutter-cleaning",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faBuilding,
       title: "Commercial Gutters",
       body: "Box gutters, large-capacity systems, and multi-building schedules for property managers and GCs.",
       link: "/services/commercial-gutters",
+      image: "/pages/home/services/service-2.jpg",
     },
   ];
 
@@ -180,13 +186,10 @@ export default function HomePage() {
 
   return (
     <main className={styles.pageWrapper}>
-
       <WelcomePage />
-
       <TrustBar
         headline="Waco's trusted gutter company — factory-certified, insured, and warrantied on every install"
       />
-
       <div className={styles.section}>
         <ServiceCardComponent
           heading="Gutters Done Right"
@@ -194,52 +197,43 @@ export default function HomePage() {
           cards={services}
         />
       </div>
-
       <div className={styles.section}>
         <ImpactMetrics metrics={metrics} cityName="Waco" />
       </div>
-
       <div className={styles.section}>
         <WhyChooseUs cityName="Waco" features={whyFeatures} />
       </div>
-
       <div className={styles.section}>
         <ProcessTimeline steps={processSteps} />
       </div>
-
-      <div className={styles.section}>
-        <WhatToExpect expectations={expectations} />
-      </div>
-
       <div className={styles.section}>
         <Testimonials testimonials={reviews} />
       </div>
-
+      <CTABanner
+        headline="Water Routed Off Your Home."
+        subline="Seamless gutters, guards, and repairs that stop fascia rot and foundation splashback."
+        primaryText="Call (254) 760-5500"
+        primaryLink="tel:+12547605500"
+        secondaryText="Free Gutter Measure"
+        secondaryLink="/contact"
+      
+        imageSrc="/pages/home/welcome/hero-main.jpg"
+       />
       <div className={styles.section}>
         <GuaranteeSection />
       </div>
-
       <div className={styles.section}>
         <LocalServiceAreas cityName="Waco" areas={localAreas} />
       </div>
-
+      <div className={styles.section}>
+        <WhatToExpect expectations={expectations} />
+      </div>
       <div className={styles.section}>
         <FAQ cityName="Waco" faq={faq} />
       </div>
-
-      <CTABanner
-        headline="Ready for Gutters That Actually Protect Your Home?"
-        subline="Free on-site estimate. Flat-rate quotes. Factory-certified installers. Lifetime Seam Warranty + 2-Year Labor."
-        primaryText="Call (254) 760-5500"
-        primaryLink="tel:+12547605500"
-        secondaryText="Free Estimate"
-        secondaryLink="/contact"
-      />
-
       <div className={styles.section}>
         <BlogPreviewGrid />
       </div>
-
       <div className={styles.section}>
         <Variant4 title="Request Your Free Gutter Estimate" cityName="Waco" slug="home" spot="home-page-form" formVariant={1} />
       </div>

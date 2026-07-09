@@ -5,46 +5,55 @@ import styles from './styles.module.scss';
 import { useTrackEvent } from '&/useTrackEvent';
 
 interface CTABannerProps {
-  headline?:    string;
+  headline?: string;
   subline?: string;
-  primaryText?:  string;
-  primaryLink?:   string;
+  primaryText?: string;
+  primaryLink?: string;
   secondaryText?: string;
-  secondaryLink?:  string;
-  spot?:       string;
+  secondaryLink?: string;
+  spot?: string;
+  imageSrc?: string;
+  eyebrow?: string;
+  badgeA?: string;
+  badgeB?: string;
+  badgeC?: string;
 }
 
+/** FlowGuard — rain motif */
 export default function CTABanner({
-  headline      = "Ready for Gutters That Protect Your Home?",
-  subline   = "Free on-site estimates. Flat-rate pricing — no hidden fees. Call now or book a free estimate online.",
-  primaryText  = "Call (254) 760-5500",
-  primaryLink   = "tel:+12547605500",
-  secondaryText = "Free Estimate",
-  secondaryLink  = "/contact",
+  headline = "Water Routed Off Your Home.",
+  subline = "Seamless gutters, guards, and repairs that stop fascia rot and foundation splashback.",
+  primaryText = "Call (254) 760-5500",
+  primaryLink = "tel:+12547605500",
+  secondaryText = "Free Gutter Measure",
+  secondaryLink = "/contact",
   spot = "CTABanner",
+  imageSrc,
+  eyebrow = "FlowGuard · Central Texas",
+  badgeA = "Seamless",
+  badgeB = "Guards",
+  badgeC = "Color Match",
 }: CTABannerProps) {
   const trackEvent = useTrackEvent();
 
   return (
     <section className={styles.banner} aria-label="Call to action">
-      {/* Decorative grid lines */}
+      {imageSrc ? (
+        <div className={styles.photoBg} aria-hidden="true">
+          <img src={imageSrc} alt="" className={styles.photoBgImg} />
+          <div className={styles.photoScrim} />
+        </div>
+      ) : null}
+
       <div className={styles.grid} aria-hidden="true" />
 
-      {/* Rotating snowflake bg */}
       <motion.div
-        className={styles.bgFlake}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
+        className={styles.bgMotif}
+        animate={{ y: [0, 14, 0], opacity: [0.5, 0.9, 0.5] }}
+        transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
       >
-        <svg width="520" height="520" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round">
-          <line x1="12" y1="2" x2="12" y2="22"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <polyline points="8 6 12 2 16 6"/>
-          <polyline points="8 18 12 22 16 18"/>
-          <polyline points="6 8 2 12 6 16"/>
-          <polyline points="18 8 22 12 18 16"/>
-        </svg>
+        <svg width="400" height="400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5.5 5 9.5c0 4.5 4 8.5 7 12.5 3-4 7-8 7-12.5C19 5.5 16 2 12 2zm0 3c2.2 0 4 2 4 4.5S14.2 14 12 17c-2.2-3-4-5-4-7.5S9.8 5 12 5z" opacity="0.85"/></svg>
       </motion.div>
 
       <div className={styles.inner}>
@@ -57,7 +66,7 @@ export default function CTABanner({
         >
           <span className={styles.eyebrow}>
             <span className={styles.eyebrowDot} />
-            Central Texas Gutter & Guard Experts Since 2013
+            {eyebrow}
           </span>
           <h2 className={styles.heading}>{headline}</h2>
           <p className={styles.sub}>{subline}</p>
@@ -80,7 +89,6 @@ export default function CTABanner({
             </svg>
             {primaryText}
           </a>
-
           <Link
             href={secondaryLink}
             className={styles.secondaryBtn}
@@ -91,19 +99,18 @@ export default function CTABanner({
               <polyline points="9 18 15 12 9 6"/>
             </svg>
           </Link>
-
           <div className={styles.badges}>
             <span className={styles.badge}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              No Contracts
+              {badgeA}
             </span>
             <span className={styles.badge}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Lifetime Seam Warranty
+              {badgeB}
             </span>
             <span className={styles.badge}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Flat-Rate
+              {badgeC}
             </span>
           </div>
         </motion.div>
