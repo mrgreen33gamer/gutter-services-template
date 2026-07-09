@@ -21,43 +21,43 @@ interface TechStackProps {
 
 const DEFAULT_GROUPS: BrandGroup[] = [
   {
-    label: 'Equipment Brands We Service',
+    label: 'Gutter Systems We Install',
     items: [
-      { name: 'Carrier',     type: 'brand', icon: '❄️' },
-      { name: 'Trane',       type: 'brand', icon: '❄️' },
-      { name: 'Lennox',      type: 'brand', icon: '❄️' },
-      { name: 'Rheem',       type: 'brand', icon: '❄️' },
-      { name: 'Goodman',     type: 'brand', icon: '❄️' },
-      { name: 'York',        type: 'brand', icon: '❄️' },
-      { name: 'Daikin',      type: 'brand', icon: '❄️' },
-      { name: 'American Standard', type: 'brand', icon: '❄️' },
+      { name: 'Seamless Aluminum', type: 'brand', icon: '💧' },
+      { name: 'K-Style 5"',        type: 'brand', icon: '💧' },
+      { name: 'K-Style 6"',        type: 'brand', icon: '💧' },
+      { name: 'Half-Round',        type: 'brand', icon: '💧' },
+      { name: 'Box Gutters',       type: 'brand', icon: '💧' },
+      { name: 'Micro-Mesh Guards', type: 'brand', icon: '🛡️' },
+      { name: 'Screen Guards',     type: 'brand', icon: '🛡️' },
+      { name: 'Commercial Systems',type: 'brand', icon: '🏢' },
     ],
   },
   {
     label: 'Certifications & Licenses',
     items: [
-      { name: 'NATE Certified',      type: 'cert', icon: '✓' },
-      { name: 'TDLR Licensed',       type: 'cert', icon: '✓' },
-      { name: 'EPA 608 Certified',   type: 'cert', icon: '✓' },
-      { name: 'Fully Insured',       type: 'cert', icon: '✓' },
+      { name: 'Factory-Certified',  type: 'cert', icon: '✓' },
+      { name: 'Lead Installer',     type: 'cert', icon: '✓' },
+      { name: 'Bonded & Insured',   type: 'cert', icon: '✓' },
+      { name: 'Lifetime Seam + 2-Yr Labor', type: 'cert', icon: '✓' },
     ],
   },
   {
-    label: 'System Types',
+    label: 'Service Types',
     items: [
-      { name: 'Central AC',          type: 'tool', icon: '🌡️' },
-      { name: 'Heat Pumps',          type: 'tool', icon: '🌡️' },
-      { name: 'Mini-Splits',         type: 'tool', icon: '🌡️' },
-      { name: 'Gas Furnaces',        type: 'tool', icon: '🌡️' },
-      { name: 'Duct Systems',        type: 'tool', icon: '🌡️' },
-      { name: 'Air Handlers',        type: 'tool', icon: '🌡️' },
+      { name: 'Seamless Gutters',      type: 'tool', icon: '🏠' },
+      { name: 'Gutter Guards',         type: 'tool', icon: '🛡️' },
+      { name: 'Gutter Repair',         type: 'tool', icon: '🔧' },
+      { name: 'Downspouts & Drainage', type: 'tool', icon: '💧' },
+      { name: 'Gutter Cleaning',       type: 'tool', icon: '🧹' },
+      { name: 'Commercial Gutters',    type: 'tool', icon: '🏢' },
     ],
   },
 ];
 
 const TechStack: React.FC<TechStackProps> = ({
-  title    = 'All Brands, All Systems',
-  subtitle = 'We service every major brand and system type — no brand-specific limitations, no excuses.',
+  title    = 'Factory-Certified Work, Premium Products',
+  subtitle = 'We install seamless systems and guards with factory-certified crews — no shortcuts on hangers, pitch, or materials.',
   groups   = DEFAULT_GROUPS,
 }) => {
   return (

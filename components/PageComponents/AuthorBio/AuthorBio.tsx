@@ -14,31 +14,30 @@ interface AuthorBioProps {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Joshua Feliciano",
-  jobTitle: "Founder & Lead Developer",
+  name: "Priya Nair",
+  jobTitle: "Owner & Lead Installer",
   worksFor: {
     "@type": "Organization",
-    name: "Scott Applications",
-    url: "https://www.scottapplications.com",
+    name: "FlowGuard Gutters",
+    url: "https://www.flowguardgutters.com",
   },
-  url: "https://www.scottapplications.com/about",
+  url: "https://www.flowguardgutters.com/about",
   sameAs: [
-    "https://www.linkedin.com/in/joshua-feliciano-231765172/",
-    "https://www.scottapplications.com",
+    "https://www.facebook.com/flowguardgutters",
+    "https://www.flowguardgutters.com",
   ],
   knowsAbout: [
-    "Web Design", "Next.js Development", "Local SEO",
-    "Custom Software Development", "Graphic Design",
-    "Digital Marketing", "Central Texas Business",
+    "Seamless Gutters", "Gutter Guards", "Gutter Repair",
+    "Downspouts & Drainage", "Gutter Cleaning", "Commercial Gutters",
   ],
   description:
-    "Founder of Scott Applications in Waco, TX. 10+ years building websites, custom software, and digital marketing solutions for Central Texas businesses. Direct developer — no middlemen.",
+    "Owner of FlowGuard Gutters in Waco, TX. Factory-certified installer with 13+ years protecting Central Texas homes and businesses. Flat-rate pricing, Lifetime Seam Warranty + 2-Year Labor.",
 };
 
 const AuthorBio: React.FC<AuthorBioProps> = ({
   cityName,
   imageSrc = "/pages/seo-template-resources/owner.jpg",
-  imageAlt = "Joshua Feliciano - Founder of Scott Applications",
+  imageAlt = "Priya Nair - Owner of FlowGuard Gutters",
 }) => {
   const trackEvent = useTrackEvent();
 
@@ -67,50 +66,49 @@ const AuthorBio: React.FC<AuthorBioProps> = ({
         </div>
 
         <div className={styles.content}>
-          <p className={styles.role}>Founder & Lead Developer · Scott Applications</p>
-          <h2 className={styles.title}>Joshua Feliciano</h2>
+          <p className={styles.role}>Owner & Lead Installer · FlowGuard Gutters</p>
+          <h2 className={styles.title}>Priya Nair</h2>
 
           <p className={styles.description}>
-            10+ years building websites, software, and marketing systems for Central Texas
-            businesses. Based in <strong>Waco, TX</strong> — serving{" "}
-            <strong>{cityName}</strong> and the surrounding region. Every project is
-            fixed-price, direct-developer, and 100% owned by you at delivery.
+            13+ years as a factory-certified installer serving Central Texas
+            homes and businesses. Based in <strong>Waco, TX</strong> — serving{" "}
+            <strong>{cityName}</strong> and the surrounding region. Every job is
+            flat-rate, warrantied, and done right the first time.
           </p>
 
           <ul className={styles.credentials} aria-label="Credentials and specializations">
-            <li>Next.js & React — production sites since 2019</li>
-            <li>Local SEO — ranked 30+ Central Texas businesses in Google top 3</li>
-            <li>Custom software — CRMs, portals, and automation for TX businesses</li>
-            <li>Google Business Profile optimization — 5★ rated agency</li>
+            <li>Factory-Certified Installer</li>
+            <li>Seamless gutters, guards, repair, downspouts &amp; cleaning</li>
+            <li>6,000+ gutter installs across Central Texas</li>
+            <li>Bonded, insured, Lifetime Seam Warranty + 2-Year Labor on every install</li>
           </ul>
 
           <p className={styles.updated}>
-            Last updated April 2026 · Based on real local data &amp; 2026 Texas growth projections
+            Last updated April 2026 · Based on real local data &amp; 2026 Texas building practices
           </p>
 
           <div className={styles.footer}>
-            {/* LinkedIn link — tracked */}
             <a
-              href="https://www.linkedin.com/in/joshua-feliciano-231765172/"
+              href="https://www.facebook.com/flowguardgutters"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.linkedinLink}
-              aria-label="Connect with Joshua Feliciano on LinkedIn"
+              aria-label="Connect with FlowGuard Gutters on Facebook"
               onClick={() => trackEvent({
                 eventType:    'click',
-                elementLabel: 'Connect on LinkedIn',
+                elementLabel: 'Connect on Facebook',
                 section:      'AuthorBio',
               })}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
-              Connect on LinkedIn
+              Find us on Facebook
             </a>
 
             <div className={styles.badges}>
-              <span className={styles.badge}>10+ Years</span>
-              <span className={styles.badge}>5.0 ★ Rated</span>
+              <span className={styles.badge}>13+ Years</span>
+              <span className={styles.badge}>4.9 ★ Rated</span>
               <span className={styles.badge}>Waco, TX</span>
             </div>
           </div>
