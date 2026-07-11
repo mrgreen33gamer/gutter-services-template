@@ -63,14 +63,14 @@ export default function HomePage() {
       title: "Gutter Cleaning",
       body: "Thorough cleanouts, flush tests, and debris haul-away — so your system works when the next storm hits.",
       link: "/services/gutter-cleaning",
-      image: "/pages/home/services/service-1.jpg",
+      image: "/pages/home/welcome/before.jpg",
     },
     {
       icon: faBuilding,
       title: "Commercial Gutters",
       body: "Box gutters, large-capacity systems, and multi-building schedules for property managers and GCs.",
       link: "/services/commercial-gutters",
-      image: "/pages/home/services/service-2.jpg",
+      image: "/pages/home/welcome/after.jpg",
     },
   ];
 
